@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://invoo.es/sitemap.xml

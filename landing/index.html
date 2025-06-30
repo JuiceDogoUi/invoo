@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoo.es - Facturación VeriFactu para Autónomos | Cumplimiento AEAT Automático</title>
+    <meta name="description" content="La plataforma SaaS más avanzada para autónomos españoles. Crea, gestiona y envía facturas VeriFactu a la AEAT automáticamente. Cumplimiento garantizado con la nueva Ley Antifraude.">
+    <meta name="keywords" content="VeriFactu, facturación autónomos, AEAT, Ley Antifraude, facturación electrónica, España, autónomos, facturación automática">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://invoo.es/">
+    <meta property="og:title" content="Invoo.es - Facturación VeriFactu para Autónomos">
+    <meta property="og:description" content="La plataforma SaaS más avanzada para autónomos españoles. Cumplimiento VeriFactu automático con la AEAT.">
+    <meta property="og:image" content="https://invoo.es/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://invoo.es/">
+    <meta property="twitter:title" content="Invoo.es - Facturación VeriFactu para Autónomos">
+    <meta property="twitter:description" content="La plataforma SaaS más avanzada para autónomos españoles. Cumplimiento VeriFactu automático con la AEAT.">
+    <meta property="twitter:image" content="https://invoo.es/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-indigo-600">Invoo.es</div>
+                    <span class="ml-2 px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">VeriFactu Certified</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-indigo-600 transition-colors">Características</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-indigo-600 transition-colors">Precios</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition-colors">Contacto</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button data-action="contact" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-semibold">
+                        Acceso Anticipado
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg hero-pattern min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <div class="mb-6">
+                        <span class="inline-flex items-center px-3 py-1 bg-white/20 rounded-full text-sm font-medium text-white backdrop-blur-sm">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
+                            </svg>
+                            100% Cumplimiento VeriFactu
+                        </span>
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Facturación VeriFactu 
+                        <span class="text-yellow-300">Sin Complicaciones</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-white/90 leading-relaxed">
+                        La primera plataforma SaaS diseñada específicamente para autónomos españoles. 
+                        Crea, gestiona y envía facturas a la AEAT automáticamente con total cumplimiento de la nueva Ley Antifraude.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <button data-action="contact" class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                            Únete a la Lista de Espera
+                        </button>
+                        <button onclick="InvooLanding.scrollToDemo()" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
+                            Ver Demo
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-3 gap-8 text-center">
+                        <div>
+                            <div class="text-3xl font-bold text-yellow-300">2024</div>
+                            <div class="text-sm text-white/80">Obligatorio desde</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-yellow-300">€6K</div>
+                            <div class="text-sm text-white/80">Multas por incumplir</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-yellow-300">100%</div>
+                            <div class="text-sm text-white/80">Automatización</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                Factura Verificada AEAT
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Factura nº:</span>
+                                <span class="font-semibold">A-2024-001</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Cliente:</span>
+                                <span class="font-semibold">Empresa SL</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Importe:</span>
+                                <span class="font-semibold text-green-600">1.210,00 €</span>
+                            </div>
+                            <div class="border-t pt-4">
+                                <div class="flex items-center text-green-600">
+                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
+                                    </svg>
+                                    <span class="font-semibold">Enviada a AEAT automáticamente</span>
+                                </div>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <div class="text-center">
+                                    <div class="w-24 h-24 mx-auto bg-black mb-2 rounded" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIyNCIgeT0iOCIgd2lkdGg9IjgiIGhlaWdodD0iOCIgZmlsbD0id2hpdGUiLz4KPC9zdmc+'); background-size: cover;"></div>
+                                    <div class="text-xs text-gray-600">Código QR VeriFactu</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Todo lo que necesitas para el cumplimiento VeriFactu</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Diseñado específicamente para autónomos españoles que quieren cumplir con la nueva normativa sin complicaciones.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Cumplimiento Automático</h3>
+                    <p class="text-gray-600">Envío automático a la AEAT con validación en tiempo real. Nunca más te preocupes por el cumplimiento normativo.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Cálculo de IVA Inteligente</h3>
+                    <p class="text-gray-600">Aplicación automática de los tipos de IVA españoles (21%, 10%, 4%, 0%) según el tipo de servicio o producto.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Código QR Automático</h3>
+                    <p class="text-gray-600">Generación automática del código QR VeriFactu en cada factura para verificación inmediata por parte de la AEAT.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Tipos de Factura Completos</h3>
+                    <p class="text-gray-600">Soporte para todos los tipos: estándar (F1), simplificada (F2), resumen (F3) y rectificativas (R1-R5).</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">TicketBAI Integrado</h3>
+                    <p class="text-gray-600">Soporte completo para el País Vasco con generación automática de TicketBAI para Álava, Guipúzcoa y Vizcaya.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Panel de Control Avanzado</h3>
+                    <p class="text-gray-600">Estadísticas en tiempo real, seguimiento de facturas y alertas automáticas para mantener tu negocio siempre al día.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Mira cómo funciona</h2>
+                <p class="text-xl text-gray-600">En pocos clics, de la creación al envío a la AEAT</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 pulse-slow">1</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Crea tu factura</h3>
+                    <p class="text-gray-600">Añade los datos del cliente, productos o servicios. El sistema calcula automáticamente los impuestos y determina el tipo de factura.</p>
+                    <div class="mt-6 bg-gray-50 p-4 rounded-lg">
+                        <div class="text-sm text-left space-y-2">
+                            <div class="flex justify-between">
+                                <span>Servicio de consultoría</span>
+                                <span>1.000€</span>
+                            </div>
+                            <div class="flex justify-between text-gray-600">
+                                <span>IVA (21%)</span>
+                                <span>210€</span>
+                            </div>
+                            <div class="border-t pt-2 flex justify-between font-semibold">
+                                <span>Total</span>
+                                <span>1.210€</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 pulse-slow" style="animation-delay: 1s;">2</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Validación automática</h3>
+                    <p class="text-gray-600">El sistema valida todos los campos según la normativa VeriFactu y genera el código QR oficial para verificación.</p>
+                    <div class="mt-6 bg-green-50 p-4 rounded-lg border border-green-200">
+                        <div class="text-green-700 font-semibold mb-2">✓ Validación completa</div>
+                        <div class="text-sm text-green-600 space-y-1">
+                            <div>✓ Datos fiscales correctos</div>
+                            <div>✓ Cálculo de IVA validado</div>
+                            <div>✓ Formato VeriFactu cumplido</div>
+                            <div>✓ Código QR generado</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 pulse-slow" style="animation-delay: 2s;">3</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Envío a la AEAT</h3>
+                    <p class="text-gray-600">Envío automático y seguro a la Agencia Tributaria. Recibes confirmación inmediata del registro exitoso.</p>
+                    <div class="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <div class="text-blue-700 font-semibold mb-2">🚀 Enviado exitosamente</div>
+                        <div class="text-sm text-blue-600 space-y-1">
+                            <div>• Registro AEAT: #VF2024001</div>
+                            <div>• Fecha: 15/01/2024 14:32</div>
+                            <div>• Estado: Aceptada</div>
+                            <div>• Código QR activo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Precios transparentes</h2>
+                <p class="text-xl text-gray-600">Sin sorpresas, sin comisiones ocultas</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Starter Plan -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Starter</h3>
+                        <p class="text-gray-600 mb-6">Perfecto para empezar</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-900">9€</span>
+                            <span class="text-gray-600">/mes</span>
+                        </div>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                Hasta 50 facturas/mes
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                Cumplimiento VeriFactu
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                Envío automático AEAT
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                Soporte por email
+                            </li>
+                        </ul>
+                        <button onclick="showNotification()" class="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            Próximamente
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="bg-indigo-600 text-white rounded-xl shadow-lg p-8 transform scale-105 relative">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <span class="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">Más Popular</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-semibold mb-2">Professional</h3>
+                        <p class="text-indigo-200 mb-6">Para autónomos establecidos</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">19€</span>
+                            <span class="text-indigo-200">/mes</span>
+                        </div>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                Hasta 200 facturas/mes
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                Todo lo del plan Starter
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                TicketBAI (País Vasco)
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                API de integración
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                Soporte prioritario
+                            </li>
+                        </ul>
+                        <button data-action="contact" class="w-full bg-white text-indigo-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Acceso Anticipado
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Enterprise</h3>
+                        <p class="text-gray-600 mb-6">Para grandes volúmenes</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-900">49€</span>
+                            <span class="text-gray-600">/mes</span>
+                        </div>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                Facturas ilimitadas
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                Todo lo del plan Pro
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                Múltiples usuarios
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                Integración personalizada
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                </svg>
+                                Soporte telefónico
+                            </li>
+                        </ul>
+                        <button onclick="showNotification()" class="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            Contactar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Preguntas frecuentes</h2>
+                <p class="text-xl text-gray-600">Todo lo que necesitas saber sobre VeriFactu</p>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">¿Qué es VeriFactu y por qué es obligatorio?</h3>
+                    <p class="text-gray-600">VeriFactu es el nuevo sistema de la AEAT que obliga a los autónomos a enviar información de sus facturas en tiempo real. Es obligatorio desde 2024 para cumplir con la Ley Antifraude y evitar multas de hasta 6.000€.</p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">¿Invoo.es garantiza el cumplimiento al 100%?</h3>
+                    <p class="text-gray-600">Sí, nuestra plataforma está diseñada específicamente para cumplir con todas las especificaciones técnicas de VeriFactu. Validamos cada factura antes del envío y garantizamos que llegue correctamente a la AEAT.</p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">¿Funciona con mi software actual?</h3>
+                    <p class="text-gray-600">Invoo.es puede funcionar de forma independiente o integrarse con tu software actual mediante nuestra API. Ofrecemos múltiples opciones de importación de datos para facilitar la transición.</p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">¿Qué pasa si trabajo en el País Vasco?</h3>
+                    <p class="text-gray-600">¡Perfecto! Nuestro plan Professional incluye soporte completo para TicketBAI, el sistema específico del País Vasco. Gestionamos automáticamente las diferencias entre provincias (Álava, Guipúzcoa, Vizcaya).</p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">¿Cuándo estará disponible la plataforma?</h3>
+                    <p class="text-gray-600">Estamos en fase final de desarrollo. Los usuarios que se unan a la lista de espera tendrán acceso anticipado y precios especiales de lanzamiento. ¡Únete ahora para no perderte nada!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg hero-pattern">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-white mb-6">¿Listo para simplificar tu facturación?</h2>
+            <p class="text-xl text-white/90 mb-8">Únete a los autónomos que ya confían en Invoo.es para su cumplimiento VeriFactu</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button data-action="contact" class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                    Acceso Anticipado Gratuito
+                </button>
+                <a href="mailto:hello@invoo.es" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
+                    Contactar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">Invoo.es</div>
+                    <p class="text-gray-400">La plataforma SaaS más avanzada para autónomos españoles que necesitan cumplir con VeriFactu.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Producto</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-white transition-colors">Características</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Precios</a></li>
+                        <li><a href="#demo" class="hover:text-white transition-colors">Demo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Soporte</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="mailto:hello@invoo.es" class="hover:text-white transition-colors">Contacto</a></li>
+                        <li><a href="mailto:support@invoo.es" class="hover:text-white transition-colors">Soporte Técnico</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Documentación</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Política de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Términos de Servicio</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Cumplimiento GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Invoo.es. Todos los derechos reservados. | Diseñado específicamente para el cumplimiento VeriFactu en España.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Modal -->
+    <div id="notification" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md mx-4">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">¡Gracias por tu interés!</h3>
+                <p class="text-gray-600 mb-6">Invoo.es está en desarrollo final. Te notificaremos cuando esté disponible con acceso anticipado y precios especiales.</p>
+                <div class="space-y-3">
+                    <a href="mailto:hello@invoo.es?subject=Lista de Espera Invoo.es&body=Hola, me gustaría unirme a la lista de espera de Invoo.es para acceso anticipado." 
+                       class="block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+                        Unirme a la Lista de Espera
+                    </a>
+                    <button onclick="hideNotification()" class="block w-full text-gray-600 hover:text-gray-800 transition-colors">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
