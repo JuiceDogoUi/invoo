@@ -1,0 +1,13 @@
+---
+deployment:
+  tasks:
+    # Copy landing page files to public_html
+    - export DEPLOYPATH=/home/$USER/public_html/
+    - /bin/cp -R landing/* $DEPLOYPATH
+    # Set proper permissions
+    - /bin/chmod 644 $DEPLOYPATH/*.html
+    - /bin/chmod 644 $DEPLOYPATH/*.css
+    - /bin/chmod 644 $DEPLOYPATH/*.js
+    - /bin/chmod -R 644 $DEPLOYPATH/img/*
+    # Create success message
+    - echo "Landing page deployed successfully at $(date)" > $DEPLOYPATH/deploy.log
