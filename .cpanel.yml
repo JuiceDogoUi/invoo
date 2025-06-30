@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/$USER/etc/invoo.es/
+    - export DEPLOYPATH=/home/$USER/public_html/
     - /bin/rm -f $DEPLOYPATH/index.html $DEPLOYPATH/style.css $DEPLOYPATH/script.js
     - /bin/cp landing/index.html $DEPLOYPATH
     - /bin/cp landing/style.css $DEPLOYPATH
