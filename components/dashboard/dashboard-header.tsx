@@ -2,7 +2,7 @@
 
 import { createClient } from '@/lib/supabase/client'
 import { Button } from '@/components/ui/button'
-import { LogOut, User } from 'lucide-react'
+import { LogOut, User, Settings } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
 interface DashboardHeaderProps {
@@ -33,6 +33,16 @@ export function DashboardHeader({ user }: DashboardHeaderProps) {
               <User className="h-4 w-4 mr-2" />
               {user.email}
             </div>
+            
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => router.push('/settings')}
+              className="flex items-center"
+            >
+              <Settings className="h-4 w-4 mr-2" />
+              Configuración
+            </Button>
             
             <Button
               variant="outline"

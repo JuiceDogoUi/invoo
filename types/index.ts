@@ -27,11 +27,12 @@ export interface Invoice {
   subtotal: number
   tax_amount: number
   total: number
+  notes?: string
   status: 'draft' | 'pending' | 'signed' | 'submitted' | 'paid'
   verifactu_hash?: string
   verifactu_signature?: string
   verifactu_id?: string
-  verifactu_status?: string
+  verifactu_status?: 'pending' | 'processing' | 'accepted' | 'rejected' | 'cancelled' | 'error'
   aeat_submitted?: boolean
   invoice_type?: 'F1' | 'F2' | 'R1' | 'R2' | 'R3' | 'R4' | 'R5' | 'F3'
   serie?: string
@@ -130,7 +131,7 @@ export interface VeriFactuSubmissionResponse {
   signature: string
   qr_code_url: string
   pdf_url?: string
-  status: 'pending' | 'processing' | 'submitted' | 'accepted' | 'rejected' | 'error'
+  status: 'pending' | 'processing' | 'submitted' | 'accepted' | 'rejected' | 'cancelled' | 'error'
   aeat_submission_id?: string
   errors?: VeriFactuError[]
 }
@@ -139,6 +140,61 @@ export interface VeriFactuError {
   code: string
   message: string
   field?: string
+}
+
+// VeriFactu Status Constants
+export const VERIFACTU_STATUSES = {
+  PENDING: 'pending',
+  PROCESSING: 'processing',
+  SUBMITTED: 'submitted',
+  ACCEPTED: 'accepted',
+  REJECTED: 'rejected',
+  CANCELLED: 'cancelled',
+  ERROR: 'error'
+} as const
+
+export const VERIFACTU_STATUS_LABELS = {
+  pending: 'Pendiente',
+  processing: 'Procesando',
+  submitted: 'Enviado',
+  accepted: 'Correcta',
+  rejected: 'Rechazada',
+  cancelled: 'Anulada',
+  error: 'Error'
+} as const
+
+export const VERIFACTU_STATUS_ICONS = {
+  pending: '⏳',
+  processing: '🔄',
+  submitted: '📤',
+  accepted: '✅',
+  rejected: '❌',
+  cancelled: '🚫',
+  error: '⚠️'
+} as const
+
+export type VeriFactuStatus = keyof typeof VERIFACTU_STATUS_LABELS
+
+// Utility functions for VeriFactu status handling
+export function mapVeriFactuApiStatus(apiStatus: string): VeriFactuStatus {
+  const statusMap: Record<string, VeriFactuStatus> = {
+    'Pendiente': 'pending',
+    'Correcta': 'accepted',
+    'Procesando': 'processing',
+    'Enviado': 'submitted',
+    'Rechazada': 'rejected',
+    'Anulada': 'cancelled',
+    'Error': 'error'
+  }
+  return statusMap[apiStatus] || ('error' as VeriFactuStatus)
+}
+
+export function getVeriFactuStatusLabel(status: VeriFactuStatus): string {
+  return VERIFACTU_STATUS_LABELS[status] || status
+}
+
+export function getVeriFactuStatusIcon(status: VeriFactuStatus): string {
+  return VERIFACTU_STATUS_ICONS[status] || '❓'
 }
 
 export interface VeriFactuSubmission {
