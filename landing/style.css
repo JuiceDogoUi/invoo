@@ -385,6 +385,50 @@ body {
     padding-left: 16px;
     padding-right: 16px;
   }
+  
+  /* Mobile menu transitions */
+  #mobile-menu {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Mobile-specific hero adjustments */
+  .hero-section {
+    min-height: calc(100vh - 64px);
+    padding-top: 80px;
+  }
+  
+  /* Mobile button sizing */
+  .mobile-cta {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  /* Further reduce padding on very small screens */
+  .hero-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  /* Ensure text doesn't overflow */
+  h1, h2, h3 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* Mobile navigation height adjustment */
+  #navbar {
+    height: auto;
+    min-height: 64px;
+  }
 }
 
 /* Loading animation for images */

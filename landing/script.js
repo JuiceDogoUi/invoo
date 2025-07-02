@@ -317,6 +317,25 @@ function initializeMobileMenu() {
             // Update aria attributes
             const isOpen = !mobileMenu.classList.contains('hidden');
             mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+            
+            // Update button icon
+            const svg = mobileMenuBtn.querySelector('svg');
+            if (isOpen) {
+                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+            } else {
+                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+            }
+        });
+        
+        // Close mobile menu when clicking on links
+        const mobileLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                const svg = mobileMenuBtn.querySelector('svg');
+                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+            });
         });
     }
 }
