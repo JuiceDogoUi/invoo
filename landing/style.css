@@ -399,7 +399,7 @@ body {
   /* Mobile-specific hero adjustments */
   .hero-section {
     min-height: calc(100vh - 64px);
-    padding-top: 80px;
+    padding-top: 100px;
   }
   
   /* Mobile button sizing */
@@ -416,6 +416,7 @@ body {
   .hero-section {
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 120px;
   }
   
   /* Ensure text doesn't overflow */
@@ -428,6 +429,11 @@ body {
   #navbar {
     height: auto;
     min-height: 64px;
+  }
+  
+  /* Additional spacing for very small screens */
+  section[class*="pt-24"] {
+    padding-top: 120px;
   }
 }
 
