@@ -71,26 +71,24 @@ function handleScrollAnimations() {
     });
 }
 
-// Navigation scroll effects
+// Modern navigation scroll effects - SaaSwiftie inspired
 function handleNavigation() {
-    const nav = $('nav');
+    const nav = $('#navbar');
     let lastScrollY = window.scrollY;
 
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
         
         if (nav) {
-            if (currentScrollY > 100) {
-                nav.style.background = 'rgba(255, 255, 255, 0.95)';
-                nav.style.backdropFilter = 'blur(10px)';
-                nav.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+            // Add/remove scrolled class based on scroll position
+            if (currentScrollY > 50) {
+                nav.classList.add('scrolled');
             } else {
-                nav.style.background = 'rgba(255, 255, 255, 0.95)';
-                nav.style.boxShadow = '0 1px 2px rgba(0, 0, 0, 0.05)';
+                nav.classList.remove('scrolled');
             }
             
-            // Hide/show navigation on scroll
-            if (currentScrollY > lastScrollY && currentScrollY > 200) {
+            // Smooth hide/show navigation on scroll (optional - can be disabled for simpler behavior)
+            if (currentScrollY > lastScrollY && currentScrollY > 300) {
                 nav.style.transform = 'translateY(-100%)';
             } else {
                 nav.style.transform = 'translateY(0)';
