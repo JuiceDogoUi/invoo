@@ -1,0 +1,21 @@
+{
+    "name": "Invoo.es - Facturación VeriFactu",
+    "short_name": "Invoo.es",
+    "description": "La plataforma SaaS más avanzada para autónomos españoles. Cumplimiento VeriFactu automático con la AEAT.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2469FE",
+    "icons": [
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon.ico",
+            "sizes": "32x32",
+            "type": "image/x-icon"
+        }
+    ]
+}
