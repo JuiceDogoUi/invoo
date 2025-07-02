@@ -122,6 +122,29 @@
             // Disable Google Analytics
             window['ga-disable-G-FFHX64C0YF'] = true;
         }
+        
+        // Google Ads conversion tracking helper
+        function gtagSendEvent(url) {
+            var callback = function () {
+                if (typeof url === 'string') {
+                    window.location = url;
+                }
+            };
+            
+            // Only send event if analytics is enabled
+            if (localStorage.getItem('cookieConsent') === 'accepted' && typeof gtag !== 'undefined') {
+                gtag('event', 'contact_email_click', {
+                    'event_category': 'conversion',
+                    'event_label': 'lista_de_espera',
+                    'event_callback': callback,
+                    'event_timeout': 2000
+                });
+            } else {
+                // If no consent or gtag not available, execute callback immediately
+                callback();
+            }
+            return false;
+        }
     </script>
 </head>
 <body class="font-sans">

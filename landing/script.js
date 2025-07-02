@@ -110,7 +110,9 @@ function initializeContactForm() {
     const contactBtns = $$('[data-action="contact"]');
     
     contactBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default action
+            
             const subject = encodeURIComponent('Lista de Espera Invoo.es');
             const body = encodeURIComponent(`Hola,
 
@@ -129,14 +131,22 @@ Volumen aproximado de facturas/mes: ____
 
 ¡Gracias!`);
             
-            window.location.href = `mailto:hello@invoo.es?subject=${subject}&body=${body}`;
+            const emailUrl = `mailto:hello@invoo.es?subject=${subject}&body=${body}`;
             
-            // Analytics tracking
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'contact_attempt', {
-                    event_category: 'conversion',
-                    event_label: btn.textContent.trim()
-                });
+            // Use Google Ads tracking helper if available
+            if (typeof gtagSendEvent === 'function') {
+                gtagSendEvent(emailUrl);
+            } else {
+                // Fallback if tracking not available
+                window.location.href = emailUrl;
+                
+                // Legacy analytics tracking
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'contact_attempt', {
+                        event_category: 'conversion',
+                        event_label: btn.textContent.trim()
+                    });
+                }
             }
         });
     });
@@ -388,6 +398,17 @@ function initializeMobileMenu() {
                 svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
             });
         });
+        
+        // Close mobile menu when clicking contact button
+        const mobileContactBtn = mobileMenu.querySelector('[data-action="contact"]');
+        if (mobileContactBtn) {
+            mobileContactBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                const svg = mobileMenuBtn.querySelector('svg');
+                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+            });
+        }
     }
 }
 
