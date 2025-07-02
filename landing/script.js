@@ -305,6 +305,57 @@ function initializeAccessibility() {
     }
 }
 
+// Cookie consent functionality
+function initializeCookieConsent() {
+    const cookieBanner = $('#cookie-banner');
+    const acceptBtn = $('#accept-cookies');
+    const rejectBtn = $('#reject-cookies');
+    
+    // Check if user has already made a choice
+    const cookieConsent = localStorage.getItem('cookieConsent');
+    
+    if (!cookieConsent) {
+        // Show banner after a short delay
+        setTimeout(() => {
+            cookieBanner.classList.remove('hidden');
+        }, 2000);
+    }
+    
+    // Accept cookies
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookieBanner.classList.add('hidden');
+            
+            // Enable Google Analytics
+            if (typeof enableAnalytics === 'function') {
+                enableAnalytics();
+            }
+            
+            // Track acceptance event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'cookie_consent', {
+                    event_category: 'privacy',
+                    event_label: 'accepted'
+                });
+            }
+        });
+    }
+    
+    // Reject cookies
+    if (rejectBtn) {
+        rejectBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'rejected');
+            cookieBanner.classList.add('hidden');
+            
+            // Disable Google Analytics
+            if (typeof disableAnalytics === 'function') {
+                disableAnalytics();
+            }
+        });
+    }
+}
+
 // Mobile menu functionality
 function initializeMobileMenu() {
     const mobileMenuBtn = $('#mobile-menu-btn');
@@ -355,6 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeErrorHandling();
     initializeAccessibility();
     initializeMobileMenu();
+    initializeCookieConsent();
     
     // Add smooth scrolling to all anchor links
     $$('a[href^="#"]').forEach(anchor => {

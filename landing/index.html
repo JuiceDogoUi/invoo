@@ -83,8 +83,87 @@
     <!-- Preload critical resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
     <link rel="preload" href="img/Logo.svg" as="image">
+    
+    <!-- Google Analytics (with cookie consent) -->
+    <script>
+        // Initialize Google Analytics only if consent is given
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        
+        // Check for existing consent
+        const cookieConsent = localStorage.getItem('cookieConsent');
+        if (cookieConsent === 'accepted') {
+            loadGoogleAnalytics();
+        }
+        
+        function loadGoogleAnalytics() {
+            gtag('js', new Date());
+            gtag('config', 'G-FFHX64C0YF', {
+                anonymize_ip: true,
+                cookie_flags: 'SameSite=None;Secure'
+            });
+            
+            // Load the gtag script
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-FFHX64C0YF';
+            document.head.appendChild(script);
+        }
+        
+        // Function to enable analytics (called from cookie banner)
+        function enableAnalytics() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            loadGoogleAnalytics();
+        }
+        
+        // Function to disable analytics
+        function disableAnalytics() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            // Disable Google Analytics
+            window['ga-disable-G-FFHX64C0YF'] = true;
+        }
+    </script>
 </head>
 <body class="font-sans">
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-gray-200 shadow-2xl z-50 p-4 sm:p-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="flex-1">
+                    <div class="flex items-start gap-3">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-1">Configuración de Cookies</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Utilizamos cookies para mejorar tu experiencia de navegación y analizar el tráfico del sitio web. 
+                                Al aceptar, nos ayudas a entender cómo utilizas nuestro sitio para mejorarlo continuamente.
+                                <a href="#" class="text-blue-600 hover:text-blue-700 underline ml-1">Más información</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                    <button 
+                        id="reject-cookies" 
+                        class="px-4 py-2 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200 w-full sm:w-auto"
+                    >
+                        Solo Necesarias
+                    </button>
+                    <button 
+                        id="accept-cookies" 
+                        class="px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg w-full sm:w-auto"
+                    >
+                        Aceptar Todas
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
