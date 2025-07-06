@@ -2,4 +2,12 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/invoo/public_html/
-    - /bin/cp -R landing $DEPLOYPATH
+    - /bin/cp landing/*.html $DEPLOYPATH
+    - /bin/cp landing/*.css $DEPLOYPATH
+    - /bin/cp landing/*.js $DEPLOYPATH
+    - /bin/cp landing/*.txt $DEPLOYPATH
+    - /bin/cp landing/*.xml $DEPLOYPATH
+    - /bin/cp landing/*.ico $DEPLOYPATH
+    - /bin/cp landing/*.png $DEPLOYPATH
+    - /bin/cp landing/*.webmanifest $DEPLOYPATH
+    - /bin/cp -R landing/img $DEPLOYPATH
