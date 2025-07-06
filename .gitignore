@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# FTP deployment credentials
+ftp-config.sh
+ftp_upload.txt

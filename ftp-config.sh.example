@@ -1,0 +1,21 @@
+# FTP Configuration for Invoo Landing Page Deployment
+# Copy this file to ftp-config.sh and fill in your actual FTP credentials
+
+# Your FTP server hostname (usually your domain or hosting provider's FTP server)
+FTP_HOST="ftp.yourdomain.com"
+
+# Your FTP username (usually your cPanel username or FTP account username)
+FTP_USER="your-ftp-username"
+
+# Your FTP password
+FTP_PASS="your-ftp-password"
+
+# The directory path on your server where files should be uploaded
+# For most hosting providers, this is /public_html for the main domain
+# For subdomains, it might be /public_html/subdomain
+FTP_DIR="/public_html"
+
+# Notes:
+# - Keep this file secure and never commit it to git
+# - Make sure ftp-config.sh is in your .gitignore
+# - You can get these credentials from your hosting provider's control panel
