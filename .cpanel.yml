@@ -1,14 +1,13 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/$USER/public_html/
-    - /bin/cp landing/index.html $DEPLOYPATH
-    - /bin/cp landing/style.css $DEPLOYPATH
-    - /bin/cp landing/script.js $DEPLOYPATH
-    - /bin/cp landing/tailwind-compiled.css $DEPLOYPATH
-    - /bin/cp landing/robots.txt $DEPLOYPATH
-    - /bin/cp landing/sitemap.xml $DEPLOYPATH
-    - /bin/cp landing/favicon.ico $DEPLOYPATH
-    - /bin/cp landing/apple-touch-icon.png $DEPLOYPATH
-    - /bin/cp landing/site.webmanifest $DEPLOYPATH
-    - /bin/cp -R landing/img $DEPLOYPATH
+    - /bin/cp landing/index.html $HOME/public_html/
+    - /bin/cp landing/style.css $HOME/public_html/
+    - /bin/cp landing/script.js $HOME/public_html/
+    - /bin/cp landing/tailwind-compiled.css $HOME/public_html/
+    - /bin/cp landing/robots.txt $HOME/public_html/
+    - /bin/cp landing/sitemap.xml $HOME/public_html/
+    - /bin/cp landing/favicon.ico $HOME/public_html/
+    - /bin/cp landing/apple-touch-icon.png $HOME/public_html/
+    - /bin/cp landing/site.webmanifest $HOME/public_html/
+    - /bin/cp -R landing/img $HOME/public_html/
