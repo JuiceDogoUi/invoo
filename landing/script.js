@@ -414,7 +414,7 @@ function initializeMobileMenu() {
 
 // Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('🚀 Invoo.es Landing Page Loaded');
+    // Landing page loaded
     
     // Initialize all functionality
     handleScrollAnimations();
